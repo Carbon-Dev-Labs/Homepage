@@ -113,6 +113,42 @@
         </div>
     </div>
 
+    <div class="container px-4 py-5" id="learn-more">
+        <h2 class="pb-2 border-bottom">Bookmarkley</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="bi bi-tools"></i>
+                </div>
+                <div>
+                    <h3 class="fs-2">Bookmarkley Common</h3>
+                    <p>Bookmarkley is currently up and running!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 pt-5 my-5 text-center">
+        <h1 class="display-4 fw-bold">Service Issues? Report an outage here./h1>
+        <div class="col-lg-6 mx-auto">
+            <form name="Service Issues" method="POST" action="/servicesuccess/" data-netlify="true">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text" id="emailInputHelp">Service</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="emailInputHelp" name="service">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Service Issue</span>
+                    <textarea class="form-control" aria-label="With textarea" name="serviceIssue"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <p class="col-md-4 mb-0 text-muted">&copy; 2022 Carbon Network, Inc</p>
