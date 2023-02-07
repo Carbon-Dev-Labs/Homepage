@@ -59,7 +59,7 @@
 </style>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+    <nav id="navigation" class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Carbon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -69,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -84,8 +84,10 @@
             </div>
         </div>
     </nav>
+    
+    <div data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true">
 
-    <div class="px-4 py-5 text-center" style="margin-top: 6rem;margin-bottom: 3rem;">
+    <div id="" class="px-4 py-5 text-center" style="margin-top: 6rem;margin-bottom: 3rem;">
         <img class="d-block mx-auto mb-4"
             src="https://raw.githubusercontent.com/Carbon-Dev-Network/.github/main/CarbonCatLogo.png" alt="Carbon Logo"
             width="100" height="100">
@@ -182,6 +184,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    
     </div>
 
     <div class="container">
