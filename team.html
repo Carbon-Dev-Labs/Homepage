@@ -60,6 +60,14 @@
         width: 3rem;
         height: 3rem;
     }
+
+    .navsticktop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 </style>
 
 <body>
@@ -133,8 +141,9 @@
         document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 640) {
-                    document.getElementById('navbarstick').classList.add('fixed-top');
-                    document.body.style.padding = '0';
+                    document.getElementById('navbarstick').classList.add('navsticktop');
+                    document.body.style.padding = '0 0 0 0';
+                    
                     navbar_height = document.querySelector('.navbar').offsetHeight;
                     document.body.style.paddingTop = navbar_height + 'px';
                 } else {
