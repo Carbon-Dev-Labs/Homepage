@@ -73,12 +73,12 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active" aria-current="page">
                         <a class="nav-link" href="/team">Our Team</a>
                     </li>
                     <li class="nav-item">
@@ -93,29 +93,71 @@
         <img class="d-block mx-auto mb-4" src="/CarbonCatLogo.png" alt="Carbon Logo" width="100" height="100">
         <h1 class="display-5 fw-bold">Our Team</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
+            <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
+                most
                 popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
                 extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Teams
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#managment">Managment</a></li>
+                        <li><a class="dropdown-item" href="#D">Development</a></li>
+                        <li><a class="dropdown-item" href="#">Legal</a></li>
+                        <li><a class="dropdown-item" href="#">Social</a></li>
+                        <li><a class="dropdown-item" href="#">Design</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="navbarstick" class="container">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#managment" class="nav-link">Managment</a></li>
+                <li class="nav-item"><a href="#development" class="nav-link">Development</a></li>
+                <li class="nav-item"><a href="#design" class="nav-link">Design</a></li>
+                <li class="nav-item"><a href="#legal" class="nav-link">Legal</a></li>
+                <li class="nav-item"><a href="#social" class="nav-link">Social</a></li>
+            </ul>
+        </header>
+    </div>
 
-    <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">Our Team </h2>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 552) {
+                    document.getElementById('navbarstick').classList.add('fixed-top');
+                    navbar_height = document.querySelector('.navbar').offsetHeight;
+                    document.body.style.paddingTop = navbar_height + 'px';
+                } else {
+                    document.getElementById('navbarstick').classList.remove('fixed-top');
+                    document.body.style.paddingTop = '0';
+                }
+            });
+        }); 
+    </script>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true">
+
+    <div id="managment" class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Managment Team</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-                        viewBox="0 0 16 16">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     </svg>
                 </div>
                 <h3 class="fs-2">Jacob Austin</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
                     probably just keep going until we run out of words.</p>
                 <a href="https://cleverportfolio.carbondev.cf" class="icon-link d-inline-flex align-items-center">
                     Portfolio
@@ -127,13 +169,14 @@
             <div class="feature col">
                 <div
                     class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-                        viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     </svg>
                 </div>
                 <h3 class="fs-2">Will Polk</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
                     probably just keep going until we run out of words.</p>
                 <a href="/team/willpolk" class="icon-link d-inline-flex align-items-center">
                     Portfolio
@@ -143,6 +186,127 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <div id="development" class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Development Team</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </div>
+                <h3 class="fs-2">Jacob Austin</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
+                    probably just keep going until we run out of words.</p>
+                <a href="https://cleverportfolio.carbondev.cf" class="icon-link d-inline-flex align-items-center">
+                    Portfolio
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="design" class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Design Team</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </div>
+                <h3 class="fs-2">Jacob Austin</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
+                    probably just keep going until we run out of words.</p>
+                <a href="https://cleverportfolio.carbondev.cf" class="icon-link d-inline-flex align-items-center">
+                    Portfolio
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right" />
+                    </svg>
+                </a>
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </div>
+                <h3 class="fs-2">Will Polk</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
+                    probably just keep going until we run out of words.</p>
+                <a href="/team/willpolk" class="icon-link d-inline-flex align-items-center">
+                    Portfolio
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="legal" class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Legal Team</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </div>
+                <h3 class="fs-2">Jacob Austin</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
+                    probably just keep going until we run out of words.</p>
+                <a href="https://cleverportfolio.carbondev.cf" class="icon-link d-inline-flex align-items-center">
+                    Portfolio
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="social" class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Social Team</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </div>
+                <h3 class="fs-2">Will Polk</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and
+                    probably just keep going until we run out of words.</p>
+                <a href="/team/willpolk" class="icon-link d-inline-flex align-items-center">
+                    Portfolio
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
     </div>
 
     <div class="container">
