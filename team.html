@@ -63,7 +63,7 @@
 </style>
 
 <body>
-    <nav id="navigation" class="navbar fixed-top navbar-expand-lg bg-light">
+    <nav id="navigation" class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Carbon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -130,7 +130,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener('scroll', function () {
-                if (window.scrollY > 552) {
+                if (window.scrollY > 600) {
+                    document.getElementById('navbarstick').classList.add('fixed-top');
                     document.getElementById('navbarstick').classList.add('fixed-top');
                     navbar_height = document.querySelector('.navbar').offsetHeight;
                     document.body.style.paddingTop = navbar_height + 'px';
@@ -142,7 +143,7 @@
         }); 
     </script>
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true">
+    <div data-bs-spy="scroll" data-bs-target="#navbarstick" data-bs-smooth-scroll="true">
 
     <div id="managment" class="container px-4 py-5" id="featured-3">
         <h2 class="pb-2 border-bottom">Managment Team</h2>
